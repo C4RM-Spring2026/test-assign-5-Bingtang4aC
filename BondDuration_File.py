@@ -17,5 +17,6 @@ def getBondDuration(y, face, couponRate, m, ppy=1):
     pvcfsum += np.sum(pvcf)
 
     duration= np.sum(t*pvcf)/ pvcfsum
+    duration = np.sum((t / ppy) * pvcf) / pvcfsum
 
     return duration
